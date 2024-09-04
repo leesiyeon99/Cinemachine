@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     [SerializeField] float rotateSpeed;
-
+    [SerializeField] CinemachineVirtualCamera virtualCamera;
     [SerializeField] GameObject miniMap;
 
     private void Start()
@@ -34,7 +35,6 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            Debug.Log("¹Ì´Ï¸Ê");
             miniMap.gameObject.SetActive(true);
         }
         else if (Input.GetKeyUp(KeyCode.Tab))
